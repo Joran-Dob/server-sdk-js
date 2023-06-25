@@ -1,13 +1,13 @@
 export {
     AccessToken,
     AccessTokenOptions,
-} from './src/AccessToken';
+} from './src/AccessToken.ts';
 export {
     RoomCompositeOptions,
     WebOptions,
     TrackCompositeOptions,
     EgressClient,
-} from './src/EgressClient';
+} from './src/EgressClient.ts';
 export {
     VideoGrant,
     ClaimGrants,
@@ -16,7 +16,7 @@ export {
     CreateIngressOptions,
     UpdateIngressOptions,
     IngressClient,
-} from './src/IngressClient';
+} from './src/IngressClient.ts';
 export {
     DirectFileOutput,
     EgressInfo,
@@ -28,14 +28,14 @@ export {
     SegmentedFileProtocol,
     StreamOutput,
     StreamProtocol,
-} from './src/proto/livekit_egress';
+} from './src/proto/livekit_egress.ts';
 export {
     IngressAudioOptions,
     IngressInfo,
     IngressInput,
     IngressState,
     IngressVideoOptions,
-} from './src/proto/livekit_ingress';
+} from './src/proto/livekit_ingress.ts';
 export {
     DataPacket_Kind,
     ParticipantInfo,
@@ -44,11 +44,11 @@ export {
     Room,
     TrackInfo,
     TrackType,
-} from './src/proto/livekit_models';
+} from './src/proto/livekit_models.ts';
 export {
     CreateOptions,
     RoomServiceClient,
-} from './src/RoomServiceClient';
+} from './src/RoomServiceClient.ts';
 export {
     WebhookReceiver,
-} from './src/WebhookReceiver';
+} from './src/WebhookReceiver.ts';
