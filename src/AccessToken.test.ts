@@ -1,6 +1,6 @@
-import * as jose from 'jose';
-import { AccessToken, TokenVerifier } from './AccessToken';
-import { ClaimGrants } from './grants';
+import * as jose from 'https://deno.land/x/jose@v4.14.4/index.ts'
+import { AccessToken, TokenVerifier } from './AccessToken.ts';
+import { ClaimGrants } from './grants.ts';
 
 const testApiKey = 'abcdefg';
 const testSecret = 'abababa';

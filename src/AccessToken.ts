@@ -1,5 +1,5 @@
-import * as jose from 'jose';
-import { ClaimGrants, VideoGrant } from './grants';
+import * as jose from 'https://deno.land/x/jose@v4.14.4/index.ts'
+import { ClaimGrants, VideoGrant } from './grants.ts';
 
 // 6 hours
 const defaultTTL = `${6 * 60 * 60}s`;
@@ -46,10 +46,10 @@ export class AccessToken {
    */
   constructor(apiKey?: string, apiSecret?: string, options?: AccessTokenOptions) {
     if (!apiKey) {
-      apiKey = process.env.LIVEKIT_API_KEY;
+      apiKey = Deno.env.get("LIVEKIT_API_KEY");
     }
     if (!apiSecret) {
-      apiSecret = process.env.LIVEKIT_API_SECRET;
+      apiSecret = Deno.env.get("LIVEKIT_API_SECRET");
     }
     if (!apiKey || !apiSecret) {
       throw Error('api-key and api-secret must be set');

@@ -1,7 +1,7 @@
-export * from './AccessToken';
-export * from './EgressClient';
-export * from './grants';
-export * from './IngressClient';
+export * from './AccessToken.ts';
+export * from './EgressClient.ts';
+export * from './grants.ts';
+export * from './IngressClient.ts';
 export {
   DirectFileOutput,
   EgressInfo,
@@ -13,14 +13,14 @@ export {
   SegmentedFileProtocol,
   StreamOutput,
   StreamProtocol,
-} from './proto/livekit_egress';
+} from './proto/livekit_egress.ts';
 export {
   IngressAudioOptions,
   IngressInfo,
   IngressInput,
   IngressState,
   IngressVideoOptions,
-} from './proto/livekit_ingress';
+} from './proto/livekit_ingress.ts';
 export {
   DataPacket_Kind,
   ParticipantInfo,
@@ -29,6 +29,6 @@ export {
   Room,
   TrackInfo,
   TrackType,
-} from './proto/livekit_models';
-export * from './RoomServiceClient';
-export * from './WebhookReceiver';
+} from './proto/livekit_models.ts';
+export * from './RoomServiceClient.ts';
+export * from './WebhookReceiver.ts';

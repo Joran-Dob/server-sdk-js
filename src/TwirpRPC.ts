@@ -1,5 +1,5 @@
-import axios, { AxiosInstance } from 'axios';
-import camelcaseKeys from 'camelcase-keys';
+import axios from 'https://deno.land/x/redaxios@0.5.1/mod.ts';
+import { camelCase } from "https://deno.land/x/camelcase@v2.1.0/mod.ts";
 
 // twirp RPC adapter for client implementation
 
@@ -20,7 +20,7 @@ export class TwirpRpc {
 
   prefix: string;
 
-  instance: AxiosInstance;
+  instance: any;
 
   constructor(host: string, pkg: string, prefix?: string) {
     this.host = host;
@@ -36,8 +36,8 @@ export class TwirpRpc {
       const path = `${this.prefix}/${this.pkg}.${service}/${method}`;
       this.instance
         .post(path, data, { headers })
-        .then((res) => {
-          resolve(camelcaseKeys(res.data, { deep: true }));
+        .then((res: any) => {
+          resolve(camelCase(res.data));
         })
         .catch(reject);
     });

@@ -8,9 +8,9 @@ import {
   ListIngressRequest,
   ListIngressResponse,
   UpdateIngressRequest,
-} from './proto/livekit_ingress';
-import ServiceBase from './ServiceBase';
-import { livekitPackage, Rpc, TwirpRpc } from './TwirpRPC';
+} from './proto/livekit_ingress.ts';
+import ServiceBase from './ServiceBase.ts';
+import { livekitPackage, Rpc, TwirpRpc } from './TwirpRPC.ts';
 
 const svc = 'Ingress';
 

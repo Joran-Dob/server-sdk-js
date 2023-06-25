@@ -4,7 +4,7 @@ import {
   ParticipantPermission,
   Room,
   TrackInfo,
-} from './proto/livekit_models';
+} from './proto/livekit_models.ts';
 import {
   CreateRoomRequest,
   DeleteRoomRequest,
@@ -20,9 +20,9 @@ import {
   UpdateParticipantRequest,
   UpdateRoomMetadataRequest,
   UpdateSubscriptionsRequest,
-} from './proto/livekit_room';
-import ServiceBase from './ServiceBase';
-import { livekitPackage, Rpc, TwirpRpc } from './TwirpRPC';
+} from './proto/livekit_room.ts';
+import ServiceBase from './ServiceBase.ts';
+import { livekitPackage, Rpc, TwirpRpc } from './TwirpRPC.ts';
 
 /**
  * Options for when creating a room

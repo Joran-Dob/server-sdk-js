@@ -1,6 +1,6 @@
-import crypto from 'crypto';
-import { TokenVerifier } from './AccessToken';
-import { WebhookEvent } from './proto/livekit_webhook';
+import * as crypto from "https://deno.land/std@0.110.0/node/crypto.ts";
+import { TokenVerifier } from './AccessToken.ts';
+import { WebhookEvent } from './proto/livekit_webhook.ts';
 
 export const authorizeHeader = 'Authorize';
 
