@@ -1,6 +1,3 @@
 {
-    "imports": {
-      "protobufjs": "npm:protobufjs",
-      "long": "npm:long"
-    }
-  }
+  "importMap": "./import_map.json"
+}
