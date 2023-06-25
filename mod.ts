@@ -11,7 +11,7 @@ export {
 export {
     VideoGrant,
     ClaimGrants,
-} from './src/grants';
+} from './src/grants.ts';
 export {
     CreateIngressOptions,
     UpdateIngressOptions,
