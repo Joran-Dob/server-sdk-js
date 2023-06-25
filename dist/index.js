@@ -1,20 +1,12 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TrackType = exports.TrackInfo = exports.Room = exports.ParticipantPermission = exports.ParticipantInfo_State = exports.ParticipantInfo = exports.DataPacket_Kind = exports.IngressVideoOptions = exports.IngressState = exports.IngressInput = exports.IngressInfo = exports.IngressAudioOptions = exports.StreamProtocol = exports.StreamOutput = exports.SegmentedFileProtocol = exports.SegmentedFileOutput = exports.EncodingOptionsPreset = exports.EncodingOptions = exports.EncodedFileType = exports.EncodedFileOutput = exports.EgressInfo = exports.DirectFileOutput = void 0;
-__exportStar(require("./AccessToken"), exports);
-__exportStar(require("./EgressClient"), exports);
-__exportStar(require("./grants"), exports);
-__exportStar(require("./IngressClient"), exports);
+exports.WebhookReceiver = exports.RoomServiceClient = exports.TrackType = exports.TrackInfo = exports.Room = exports.ParticipantPermission = exports.ParticipantInfo_State = exports.ParticipantInfo = exports.DataPacket_Kind = exports.IngressVideoOptions = exports.IngressState = exports.IngressInput = exports.IngressInfo = exports.IngressAudioOptions = exports.StreamProtocol = exports.StreamOutput = exports.SegmentedFileProtocol = exports.SegmentedFileOutput = exports.EncodingOptionsPreset = exports.EncodingOptions = exports.EncodedFileType = exports.EncodedFileOutput = exports.EgressInfo = exports.DirectFileOutput = exports.IngressClient = exports.EgressClient = exports.AccessToken = void 0;
+var AccessToken_1 = require("./AccessToken");
+Object.defineProperty(exports, "AccessToken", { enumerable: true, get: function () { return AccessToken_1.AccessToken; } });
+var EgressClient_1 = require("./EgressClient");
+Object.defineProperty(exports, "EgressClient", { enumerable: true, get: function () { return EgressClient_1.EgressClient; } });
+var IngressClient_1 = require("./IngressClient");
+Object.defineProperty(exports, "IngressClient", { enumerable: true, get: function () { return IngressClient_1.IngressClient; } });
 var livekit_egress_1 = require("./proto/livekit_egress");
 Object.defineProperty(exports, "DirectFileOutput", { enumerable: true, get: function () { return livekit_egress_1.DirectFileOutput; } });
 Object.defineProperty(exports, "EgressInfo", { enumerable: true, get: function () { return livekit_egress_1.EgressInfo; } });
@@ -40,6 +32,8 @@ Object.defineProperty(exports, "ParticipantPermission", { enumerable: true, get:
 Object.defineProperty(exports, "Room", { enumerable: true, get: function () { return livekit_models_1.Room; } });
 Object.defineProperty(exports, "TrackInfo", { enumerable: true, get: function () { return livekit_models_1.TrackInfo; } });
 Object.defineProperty(exports, "TrackType", { enumerable: true, get: function () { return livekit_models_1.TrackType; } });
-__exportStar(require("./RoomServiceClient"), exports);
-__exportStar(require("./WebhookReceiver"), exports);
+var RoomServiceClient_1 = require("./RoomServiceClient");
+Object.defineProperty(exports, "RoomServiceClient", { enumerable: true, get: function () { return RoomServiceClient_1.RoomServiceClient; } });
+var WebhookReceiver_1 = require("./WebhookReceiver");
+Object.defineProperty(exports, "WebhookReceiver", { enumerable: true, get: function () { return WebhookReceiver_1.WebhookReceiver; } });
 //# sourceMappingURL=index.js.map

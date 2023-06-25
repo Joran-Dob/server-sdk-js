@@ -1,7 +1,22 @@
-export * from './AccessToken';
-export * from './EgressClient';
-export * from './grants';
-export * from './IngressClient';
+export {
+  AccessToken,
+  AccessTokenOptions,
+} from './AccessToken';
+export {
+  RoomCompositeOptions,
+  WebOptions,
+  TrackCompositeOptions,
+  EgressClient,
+} from './EgressClient';
+export {
+  VideoGrant,
+  ClaimGrants,
+} from './grants';
+export {
+  CreateIngressOptions,
+  UpdateIngressOptions,
+  IngressClient,
+} from './IngressClient';
 export {
   DirectFileOutput,
   EgressInfo,
@@ -30,5 +45,10 @@ export {
   TrackInfo,
   TrackType,
 } from './proto/livekit_models';
-export * from './RoomServiceClient';
-export * from './WebhookReceiver';
+export {
+  CreateOptions,
+  RoomServiceClient,
+} from './RoomServiceClient';
+export {
+  WebhookReceiver,
+} from './WebhookReceiver';
