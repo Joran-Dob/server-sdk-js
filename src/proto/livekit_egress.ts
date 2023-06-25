@@ -757,6 +757,10 @@ export const RoomCompositeEgressRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<RoomCompositeEgressRequest>, I>>(base?: I): RoomCompositeEgressRequest {
+    return RoomCompositeEgressRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<RoomCompositeEgressRequest>, I>>(object: I): RoomCompositeEgressRequest {
     const message = createBaseRoomCompositeEgressRequest();
     message.roomName = object.roomName ?? "";
@@ -891,6 +895,10 @@ export const TrackCompositeEgressRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<TrackCompositeEgressRequest>, I>>(base?: I): TrackCompositeEgressRequest {
+    return TrackCompositeEgressRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<TrackCompositeEgressRequest>, I>>(object: I): TrackCompositeEgressRequest {
     const message = createBaseTrackCompositeEgressRequest();
     message.roomName = object.roomName ?? "";
@@ -977,6 +985,10 @@ export const TrackEgressRequest = {
     message.file !== undefined && (obj.file = message.file ? DirectFileOutput.toJSON(message.file) : undefined);
     message.websocketUrl !== undefined && (obj.websocketUrl = message.websocketUrl);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TrackEgressRequest>, I>>(base?: I): TrackEgressRequest {
+    return TrackEgressRequest.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<TrackEgressRequest>, I>>(object: I): TrackEgressRequest {
@@ -1101,6 +1113,10 @@ export const WebEgressRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<WebEgressRequest>, I>>(base?: I): WebEgressRequest {
+    return WebEgressRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<WebEgressRequest>, I>>(object: I): WebEgressRequest {
     const message = createBaseWebEgressRequest();
     message.url = object.url ?? "";
@@ -1219,6 +1235,10 @@ export const EncodedFileOutput = {
     message.azure !== undefined && (obj.azure = message.azure ? AzureBlobUpload.toJSON(message.azure) : undefined);
     message.aliOSS !== undefined && (obj.aliOSS = message.aliOSS ? AliOSSUpload.toJSON(message.aliOSS) : undefined);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<EncodedFileOutput>, I>>(base?: I): EncodedFileOutput {
+    return EncodedFileOutput.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<EncodedFileOutput>, I>>(object: I): EncodedFileOutput {
@@ -1354,6 +1374,10 @@ export const SegmentedFileOutput = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<SegmentedFileOutput>, I>>(base?: I): SegmentedFileOutput {
+    return SegmentedFileOutput.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<SegmentedFileOutput>, I>>(object: I): SegmentedFileOutput {
     const message = createBaseSegmentedFileOutput();
     message.protocol = object.protocol ?? 0;
@@ -1453,6 +1477,10 @@ export const DirectFileOutput = {
     message.azure !== undefined && (obj.azure = message.azure ? AzureBlobUpload.toJSON(message.azure) : undefined);
     message.aliOSS !== undefined && (obj.aliOSS = message.aliOSS ? AliOSSUpload.toJSON(message.aliOSS) : undefined);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<DirectFileOutput>, I>>(base?: I): DirectFileOutput {
+    return DirectFileOutput.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<DirectFileOutput>, I>>(object: I): DirectFileOutput {
@@ -1591,6 +1619,10 @@ export const S3Upload = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<S3Upload>, I>>(base?: I): S3Upload {
+    return S3Upload.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<S3Upload>, I>>(object: I): S3Upload {
     const message = createBaseS3Upload();
     message.accessKey = object.accessKey ?? "";
@@ -1657,6 +1689,10 @@ export const S3Upload_MetadataEntry = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<S3Upload_MetadataEntry>, I>>(base?: I): S3Upload_MetadataEntry {
+    return S3Upload_MetadataEntry.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<S3Upload_MetadataEntry>, I>>(object: I): S3Upload_MetadataEntry {
     const message = createBaseS3Upload_MetadataEntry();
     message.key = object.key ?? "";
@@ -1714,6 +1750,10 @@ export const GCPUpload = {
       (obj.credentials = base64FromBytes(message.credentials !== undefined ? message.credentials : new Uint8Array()));
     message.bucket !== undefined && (obj.bucket = message.bucket);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<GCPUpload>, I>>(base?: I): GCPUpload {
+    return GCPUpload.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<GCPUpload>, I>>(object: I): GCPUpload {
@@ -1780,6 +1820,10 @@ export const AzureBlobUpload = {
     message.accountKey !== undefined && (obj.accountKey = message.accountKey);
     message.containerName !== undefined && (obj.containerName = message.containerName);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<AzureBlobUpload>, I>>(base?: I): AzureBlobUpload {
+    return AzureBlobUpload.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<AzureBlobUpload>, I>>(object: I): AzureBlobUpload {
@@ -1865,6 +1909,10 @@ export const AliOSSUpload = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<AliOSSUpload>, I>>(base?: I): AliOSSUpload {
+    return AliOSSUpload.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<AliOSSUpload>, I>>(object: I): AliOSSUpload {
     const message = createBaseAliOSSUpload();
     message.accessKey = object.accessKey ?? "";
@@ -1930,6 +1978,10 @@ export const StreamOutput = {
       obj.urls = [];
     }
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<StreamOutput>, I>>(base?: I): StreamOutput {
+    return StreamOutput.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<StreamOutput>, I>>(object: I): StreamOutput {
@@ -2056,6 +2108,10 @@ export const EncodingOptions = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<EncodingOptions>, I>>(base?: I): EncodingOptions {
+    return EncodingOptions.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<EncodingOptions>, I>>(object: I): EncodingOptions {
     const message = createBaseEncodingOptions();
     message.width = object.width ?? 0;
@@ -2119,6 +2175,10 @@ export const UpdateLayoutRequest = {
     message.egressId !== undefined && (obj.egressId = message.egressId);
     message.layout !== undefined && (obj.layout = message.layout);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<UpdateLayoutRequest>, I>>(base?: I): UpdateLayoutRequest {
+    return UpdateLayoutRequest.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<UpdateLayoutRequest>, I>>(object: I): UpdateLayoutRequest {
@@ -2201,6 +2261,10 @@ export const UpdateStreamRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<UpdateStreamRequest>, I>>(base?: I): UpdateStreamRequest {
+    return UpdateStreamRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<UpdateStreamRequest>, I>>(object: I): UpdateStreamRequest {
     const message = createBaseUpdateStreamRequest();
     message.egressId = object.egressId ?? "";
@@ -2248,6 +2312,10 @@ export const ListEgressRequest = {
     const obj: any = {};
     message.roomName !== undefined && (obj.roomName = message.roomName);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<ListEgressRequest>, I>>(base?: I): ListEgressRequest {
+    return ListEgressRequest.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<ListEgressRequest>, I>>(object: I): ListEgressRequest {
@@ -2303,6 +2371,10 @@ export const ListEgressResponse = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<ListEgressResponse>, I>>(base?: I): ListEgressResponse {
+    return ListEgressResponse.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<ListEgressResponse>, I>>(object: I): ListEgressResponse {
     const message = createBaseListEgressResponse();
     message.items = object.items?.map((e) => EgressInfo.fromPartial(e)) || [];
@@ -2348,6 +2420,10 @@ export const StopEgressRequest = {
     const obj: any = {};
     message.egressId !== undefined && (obj.egressId = message.egressId);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<StopEgressRequest>, I>>(base?: I): StopEgressRequest {
+    return StopEgressRequest.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<StopEgressRequest>, I>>(object: I): StopEgressRequest {
@@ -2528,6 +2604,10 @@ export const EgressInfo = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<EgressInfo>, I>>(base?: I): EgressInfo {
+    return EgressInfo.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<EgressInfo>, I>>(object: I): EgressInfo {
     const message = createBaseEgressInfo();
     message.egressId = object.egressId ?? "";
@@ -2604,6 +2684,10 @@ export const StreamInfoList = {
       obj.info = [];
     }
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<StreamInfoList>, I>>(base?: I): StreamInfoList {
+    return StreamInfoList.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<StreamInfoList>, I>>(object: I): StreamInfoList {
@@ -2685,6 +2769,10 @@ export const StreamInfo = {
     message.duration !== undefined && (obj.duration = Math.round(message.duration));
     message.status !== undefined && (obj.status = streamInfo_StatusToJSON(message.status));
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<StreamInfo>, I>>(base?: I): StreamInfo {
+    return StreamInfo.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<StreamInfo>, I>>(object: I): StreamInfo {
@@ -2778,6 +2866,10 @@ export const FileInfo = {
     message.size !== undefined && (obj.size = Math.round(message.size));
     message.location !== undefined && (obj.location = message.location);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<FileInfo>, I>>(base?: I): FileInfo {
+    return FileInfo.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<FileInfo>, I>>(object: I): FileInfo {
@@ -2882,6 +2974,10 @@ export const SegmentsInfo = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<SegmentsInfo>, I>>(base?: I): SegmentsInfo {
+    return SegmentsInfo.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<SegmentsInfo>, I>>(object: I): SegmentsInfo {
     const message = createBaseSegmentsInfo();
     message.playlistName = object.playlistName ?? "";
@@ -2969,6 +3065,10 @@ export const AutoTrackEgress = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<AutoTrackEgress>, I>>(base?: I): AutoTrackEgress {
+    return AutoTrackEgress.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<AutoTrackEgress>, I>>(object: I): AutoTrackEgress {
     const message = createBaseAutoTrackEgress();
     message.filepath = object.filepath ?? "";
@@ -3001,7 +3101,7 @@ export interface Egress {
 declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;
-var globalThis: any = (() => {
+var tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }
@@ -3018,10 +3118,10 @@ var globalThis: any = (() => {
 })();
 
 function bytesFromBase64(b64: string): Uint8Array {
-  if (globalThis.Buffer) {
-    return Uint8Array.from(globalThis.Buffer.from(b64, "base64"));
+  if (tsProtoGlobalThis.Buffer) {
+    return Uint8Array.from(tsProtoGlobalThis.Buffer.from(b64, "base64"));
   } else {
-    const bin = globalThis.atob(b64);
+    const bin = tsProtoGlobalThis.atob(b64);
     const arr = new Uint8Array(bin.length);
     for (let i = 0; i < bin.length; ++i) {
       arr[i] = bin.charCodeAt(i);
@@ -3031,14 +3131,14 @@ function bytesFromBase64(b64: string): Uint8Array {
 }
 
 function base64FromBytes(arr: Uint8Array): string {
-  if (globalThis.Buffer) {
-    return globalThis.Buffer.from(arr).toString("base64");
+  if (tsProtoGlobalThis.Buffer) {
+    return tsProtoGlobalThis.Buffer.from(arr).toString("base64");
   } else {
     const bin: string[] = [];
     arr.forEach((byte) => {
       bin.push(String.fromCharCode(byte));
     });
-    return globalThis.btoa(bin.join(""));
+    return tsProtoGlobalThis.btoa(bin.join(""));
   }
 }
 
@@ -3055,7 +3155,7 @@ export type Exact<P, I extends P> = P extends Builtin ? P
 
 function longToNumber(long: Long): number {
   if (long.gt(Number.MAX_SAFE_INTEGER)) {
-    throw new globalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
+    throw new tsProtoGlobalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
   }
   return long.toNumber();
 }

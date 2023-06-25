@@ -1,6 +1,6 @@
 /* eslint-disable */
 import _m0 from "protobufjs/minimal";
-import { AutoTrackEgress, RoomCompositeEgressRequest } from "./livekit_egress";
+import { AutoTrackEgress, RoomCompositeEgressRequest } from "./livekit_egress.ts";
 import {
   DataPacket_Kind,
   dataPacket_KindFromJSON,
@@ -10,7 +10,7 @@ import {
   ParticipantTracks,
   Room,
   TrackInfo,
-} from "./livekit_models";
+} from "./livekit_models.ts";
 
 export const protobufPackage = "livekit";
 
@@ -209,6 +209,10 @@ export const CreateRoomRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<CreateRoomRequest>, I>>(base?: I): CreateRoomRequest {
+    return CreateRoomRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<CreateRoomRequest>, I>>(object: I): CreateRoomRequest {
     const message = createBaseCreateRoomRequest();
     message.name = object.name ?? "";
@@ -274,6 +278,10 @@ export const RoomEgress = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<RoomEgress>, I>>(base?: I): RoomEgress {
+    return RoomEgress.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<RoomEgress>, I>>(object: I): RoomEgress {
     const message = createBaseRoomEgress();
     message.room = (object.room !== undefined && object.room !== null)
@@ -332,6 +340,10 @@ export const ListRoomsRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<ListRoomsRequest>, I>>(base?: I): ListRoomsRequest {
+    return ListRoomsRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<ListRoomsRequest>, I>>(object: I): ListRoomsRequest {
     const message = createBaseListRoomsRequest();
     message.names = object.names?.map((e) => e) || [];
@@ -385,6 +397,10 @@ export const ListRoomsResponse = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<ListRoomsResponse>, I>>(base?: I): ListRoomsResponse {
+    return ListRoomsResponse.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<ListRoomsResponse>, I>>(object: I): ListRoomsResponse {
     const message = createBaseListRoomsResponse();
     message.rooms = object.rooms?.map((e) => Room.fromPartial(e)) || [];
@@ -432,6 +448,10 @@ export const DeleteRoomRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<DeleteRoomRequest>, I>>(base?: I): DeleteRoomRequest {
+    return DeleteRoomRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<DeleteRoomRequest>, I>>(object: I): DeleteRoomRequest {
     const message = createBaseDeleteRoomRequest();
     message.room = object.room ?? "";
@@ -470,6 +490,10 @@ export const DeleteRoomResponse = {
   toJSON(_: DeleteRoomResponse): unknown {
     const obj: any = {};
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<DeleteRoomResponse>, I>>(base?: I): DeleteRoomResponse {
+    return DeleteRoomResponse.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<DeleteRoomResponse>, I>>(_: I): DeleteRoomResponse {
@@ -516,6 +540,10 @@ export const ListParticipantsRequest = {
     const obj: any = {};
     message.room !== undefined && (obj.room = message.room);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<ListParticipantsRequest>, I>>(base?: I): ListParticipantsRequest {
+    return ListParticipantsRequest.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<ListParticipantsRequest>, I>>(object: I): ListParticipantsRequest {
@@ -575,6 +603,10 @@ export const ListParticipantsResponse = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<ListParticipantsResponse>, I>>(base?: I): ListParticipantsResponse {
+    return ListParticipantsResponse.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<ListParticipantsResponse>, I>>(object: I): ListParticipantsResponse {
     const message = createBaseListParticipantsResponse();
     message.participants = object.participants?.map((e) => ParticipantInfo.fromPartial(e)) || [];
@@ -632,6 +664,10 @@ export const RoomParticipantIdentity = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<RoomParticipantIdentity>, I>>(base?: I): RoomParticipantIdentity {
+    return RoomParticipantIdentity.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<RoomParticipantIdentity>, I>>(object: I): RoomParticipantIdentity {
     const message = createBaseRoomParticipantIdentity();
     message.room = object.room ?? "";
@@ -671,6 +707,10 @@ export const RemoveParticipantResponse = {
   toJSON(_: RemoveParticipantResponse): unknown {
     const obj: any = {};
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<RemoveParticipantResponse>, I>>(base?: I): RemoveParticipantResponse {
+    return RemoveParticipantResponse.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<RemoveParticipantResponse>, I>>(_: I): RemoveParticipantResponse {
@@ -745,6 +785,10 @@ export const MuteRoomTrackRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<MuteRoomTrackRequest>, I>>(base?: I): MuteRoomTrackRequest {
+    return MuteRoomTrackRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<MuteRoomTrackRequest>, I>>(object: I): MuteRoomTrackRequest {
     const message = createBaseMuteRoomTrackRequest();
     message.room = object.room ?? "";
@@ -793,6 +837,10 @@ export const MuteRoomTrackResponse = {
     const obj: any = {};
     message.track !== undefined && (obj.track = message.track ? TrackInfo.toJSON(message.track) : undefined);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<MuteRoomTrackResponse>, I>>(base?: I): MuteRoomTrackResponse {
+    return MuteRoomTrackResponse.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<MuteRoomTrackResponse>, I>>(object: I): MuteRoomTrackResponse {
@@ -877,6 +925,10 @@ export const UpdateParticipantRequest = {
       (obj.permission = message.permission ? ParticipantPermission.toJSON(message.permission) : undefined);
     message.name !== undefined && (obj.name = message.name);
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<UpdateParticipantRequest>, I>>(base?: I): UpdateParticipantRequest {
+    return UpdateParticipantRequest.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<UpdateParticipantRequest>, I>>(object: I): UpdateParticipantRequest {
@@ -980,6 +1032,10 @@ export const UpdateSubscriptionsRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<UpdateSubscriptionsRequest>, I>>(base?: I): UpdateSubscriptionsRequest {
+    return UpdateSubscriptionsRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<UpdateSubscriptionsRequest>, I>>(object: I): UpdateSubscriptionsRequest {
     const message = createBaseUpdateSubscriptionsRequest();
     message.room = object.room ?? "";
@@ -1022,6 +1078,10 @@ export const UpdateSubscriptionsResponse = {
   toJSON(_: UpdateSubscriptionsResponse): unknown {
     const obj: any = {};
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<UpdateSubscriptionsResponse>, I>>(base?: I): UpdateSubscriptionsResponse {
+    return UpdateSubscriptionsResponse.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<UpdateSubscriptionsResponse>, I>>(_: I): UpdateSubscriptionsResponse {
@@ -1103,6 +1163,10 @@ export const SendDataRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<SendDataRequest>, I>>(base?: I): SendDataRequest {
+    return SendDataRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<SendDataRequest>, I>>(object: I): SendDataRequest {
     const message = createBaseSendDataRequest();
     message.room = object.room ?? "";
@@ -1144,6 +1208,10 @@ export const SendDataResponse = {
   toJSON(_: SendDataResponse): unknown {
     const obj: any = {};
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<SendDataResponse>, I>>(base?: I): SendDataResponse {
+    return SendDataResponse.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<SendDataResponse>, I>>(_: I): SendDataResponse {
@@ -1202,6 +1270,10 @@ export const UpdateRoomMetadataRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<UpdateRoomMetadataRequest>, I>>(base?: I): UpdateRoomMetadataRequest {
+    return UpdateRoomMetadataRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<UpdateRoomMetadataRequest>, I>>(object: I): UpdateRoomMetadataRequest {
     const message = createBaseUpdateRoomMetadataRequest();
     message.room = object.room ?? "";
@@ -1248,7 +1320,7 @@ export interface RoomService {
 declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;
-var globalThis: any = (() => {
+var tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }
@@ -1265,10 +1337,10 @@ var globalThis: any = (() => {
 })();
 
 function bytesFromBase64(b64: string): Uint8Array {
-  if (globalThis.Buffer) {
-    return Uint8Array.from(globalThis.Buffer.from(b64, "base64"));
+  if (tsProtoGlobalThis.Buffer) {
+    return Uint8Array.from(tsProtoGlobalThis.Buffer.from(b64, "base64"));
   } else {
-    const bin = globalThis.atob(b64);
+    const bin = tsProtoGlobalThis.atob(b64);
     const arr = new Uint8Array(bin.length);
     for (let i = 0; i < bin.length; ++i) {
       arr[i] = bin.charCodeAt(i);
@@ -1278,14 +1350,14 @@ function bytesFromBase64(b64: string): Uint8Array {
 }
 
 function base64FromBytes(arr: Uint8Array): string {
-  if (globalThis.Buffer) {
-    return globalThis.Buffer.from(arr).toString("base64");
+  if (tsProtoGlobalThis.Buffer) {
+    return tsProtoGlobalThis.Buffer.from(arr).toString("base64");
   } else {
     const bin: string[] = [];
     arr.forEach((byte) => {
       bin.push(String.fromCharCode(byte));
     });
-    return globalThis.btoa(bin.join(""));
+    return tsProtoGlobalThis.btoa(bin.join(""));
   }
 }
 

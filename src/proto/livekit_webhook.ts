@@ -138,6 +138,10 @@ export const WebhookEvent = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<WebhookEvent>, I>>(base?: I): WebhookEvent {
+    return WebhookEvent.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<WebhookEvent>, I>>(object: I): WebhookEvent {
     const message = createBaseWebhookEvent();
     message.event = object.event ?? "";
@@ -163,7 +167,7 @@ export const WebhookEvent = {
 declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;
-var globalThis: any = (() => {
+var tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }
@@ -192,7 +196,7 @@ export type Exact<P, I extends P> = P extends Builtin ? P
 
 function longToNumber(long: Long): number {
   if (long.gt(Number.MAX_SAFE_INTEGER)) {
-    throw new globalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
+    throw new tsProtoGlobalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
   }
   return long.toNumber();
 }

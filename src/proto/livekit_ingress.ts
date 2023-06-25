@@ -1,7 +1,7 @@
 /* eslint-disable */
 import Long from "long";
 import _m0 from "protobufjs/minimal";
-import { TrackInfo, TrackSource, trackSourceFromJSON, trackSourceToJSON, VideoLayer } from "./livekit_models";
+import { TrackInfo, TrackSource, trackSourceFromJSON, trackSourceToJSON, VideoLayer } from "./livekit_models.ts";
 
 export const protobufPackage = "livekit";
 
@@ -287,6 +287,10 @@ export const CreateIngressRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<CreateIngressRequest>, I>>(base?: I): CreateIngressRequest {
+    return CreateIngressRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<CreateIngressRequest>, I>>(object: I): CreateIngressRequest {
     const message = createBaseCreateIngressRequest();
     message.inputType = object.inputType ?? 0;
@@ -386,6 +390,10 @@ export const IngressAudioOptions = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<IngressAudioOptions>, I>>(base?: I): IngressAudioOptions {
+    return IngressAudioOptions.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<IngressAudioOptions>, I>>(object: I): IngressAudioOptions {
     const message = createBaseIngressAudioOptions();
     message.name = object.name ?? "";
@@ -468,6 +476,10 @@ export const IngressVideoOptions = {
       obj.layers = [];
     }
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<IngressVideoOptions>, I>>(base?: I): IngressVideoOptions {
+    return IngressVideoOptions.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<IngressVideoOptions>, I>>(object: I): IngressVideoOptions {
@@ -623,6 +635,10 @@ export const IngressInfo = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<IngressInfo>, I>>(base?: I): IngressInfo {
+    return IngressInfo.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<IngressInfo>, I>>(object: I): IngressInfo {
     const message = createBaseIngressInfo();
     message.ingressId = object.ingressId ?? "";
@@ -743,6 +759,10 @@ export const IngressState = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<IngressState>, I>>(base?: I): IngressState {
+    return IngressState.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<IngressState>, I>>(object: I): IngressState {
     const message = createBaseIngressState();
     message.status = object.status ?? 0;
@@ -826,6 +846,10 @@ export const InputVideoState = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<InputVideoState>, I>>(base?: I): InputVideoState {
+    return InputVideoState.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<InputVideoState>, I>>(object: I): InputVideoState {
     const message = createBaseInputVideoState();
     message.mimeType = object.mimeType ?? 0;
@@ -892,6 +916,10 @@ export const InputAudioState = {
     message.channels !== undefined && (obj.channels = Math.round(message.channels));
     message.sampleRate !== undefined && (obj.sampleRate = Math.round(message.sampleRate));
     return obj;
+  },
+
+  create<I extends Exact<DeepPartial<InputAudioState>, I>>(base?: I): InputAudioState {
+    return InputAudioState.fromPartial(base ?? {});
   },
 
   fromPartial<I extends Exact<DeepPartial<InputAudioState>, I>>(object: I): InputAudioState {
@@ -1001,6 +1029,10 @@ export const UpdateIngressRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<UpdateIngressRequest>, I>>(base?: I): UpdateIngressRequest {
+    return UpdateIngressRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<UpdateIngressRequest>, I>>(object: I): UpdateIngressRequest {
     const message = createBaseUpdateIngressRequest();
     message.ingressId = object.ingressId ?? "";
@@ -1058,6 +1090,10 @@ export const ListIngressRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<ListIngressRequest>, I>>(base?: I): ListIngressRequest {
+    return ListIngressRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<ListIngressRequest>, I>>(object: I): ListIngressRequest {
     const message = createBaseListIngressRequest();
     message.roomName = object.roomName ?? "";
@@ -1111,6 +1147,10 @@ export const ListIngressResponse = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<ListIngressResponse>, I>>(base?: I): ListIngressResponse {
+    return ListIngressResponse.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<ListIngressResponse>, I>>(object: I): ListIngressResponse {
     const message = createBaseListIngressResponse();
     message.items = object.items?.map((e) => IngressInfo.fromPartial(e)) || [];
@@ -1158,6 +1198,10 @@ export const DeleteIngressRequest = {
     return obj;
   },
 
+  create<I extends Exact<DeepPartial<DeleteIngressRequest>, I>>(base?: I): DeleteIngressRequest {
+    return DeleteIngressRequest.fromPartial(base ?? {});
+  },
+
   fromPartial<I extends Exact<DeepPartial<DeleteIngressRequest>, I>>(object: I): DeleteIngressRequest {
     const message = createBaseDeleteIngressRequest();
     message.ingressId = object.ingressId ?? "";
@@ -1177,7 +1221,7 @@ export interface Ingress {
 declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;
-var globalThis: any = (() => {
+var tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }
@@ -1206,7 +1250,7 @@ export type Exact<P, I extends P> = P extends Builtin ? P
 
 function longToNumber(long: Long): number {
   if (long.gt(Number.MAX_SAFE_INTEGER)) {
-    throw new globalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
+    throw new tsProtoGlobalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
   }
   return long.toNumber();
 }
